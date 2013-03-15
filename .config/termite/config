@@ -1,0 +1,147 @@
+[options]
+resize_grip = false
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+visible_bell = false
+mouse_autohide = true
+allow_bold = false
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+font = Cousine 9
+scrollback_lines = 1000
+search_wrap = true
+#icon_name = terminal
+#geometry = 640x480
+
+# 0.0= opaque, 1.0= transparent
+transparency = 0.0
+pseudo_transparency = false
+
+# "system", "on" or "off"
+cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = underline
+
+# $BROWSER is used by default
+browser = firefox-beta-bin
+
+# word characters used for word selection
+# (default if unset= all graphic non-punctuation/space characters)
+#word_chars = -A-Za-z0-9,./?%&#=_=+@~
+
+
+#foreground = #969896
+#foreground_bold = #c5c8c6
+#foreground_dim = #888888
+#background = #1d1f21
+#cursor = #dcdccc
+
+# if unset, will reverse foreground and background
+#highlight = #2f2f2f
+
+# colors from color0 to color254 can be set
+#color0 = #282a2e
+#color1 = #A54242
+#color2 = #8C9440
+#color3 = #de935f
+#color4 = #5F819D
+#color5 = #85678F
+#color6 = #5E8D87
+#color7 = #969896
+#color8 = #373b41
+#color9 = #cc6666
+#color10 = #b5bd68
+#color11 = #f0c674
+#color12 = #81a2be
+#color13 = #b294bb
+#color14 = #8abeb7
+#color15 = #c5c8c6
+
+
+
+
+
+
+
+#pointerColorBackground = #586E75
+#pointerColorForeground = #93A1A1
+
+#background = #1F1F1F
+#foreground = #CCCCCC
+
+#! black
+#color0 = #2E3436
+#color8 = #555753
+
+#! red
+#color1 = #DC322F
+#color9 = #E84F4F
+
+#! green
+#color2 = #859900
+#color10 = #99FF66
+
+#! yellow
+#color3 = #B58900
+#color11 = #E1AA5D
+
+#! blue
+#color4 = #268BD2
+#color12 = #6699FF
+
+#! magenta
+#color5 = #9933CC
+#color13 = #CC66FF
+
+#! cyan
+#color6 = #33CC99
+#color14 = #93A1A1
+
+#! white
+#color7 = #EEE8D5
+#color15 = #FDF6E3
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#padding = 20
+#border = #3f3f3f
+#border_width = 1.5
+#roundness = 2.0
+
+[colors]
+
+# jwr dark
+#background = #080808
+background = #171717
+foreground = #999999
+
+#black/
+color0 = #333333
+#color0:#242424
+color8 = #474747
+#red
+color1 = #8A2F58
+color9 = #CF4F88
+#green
+color2 = #287373
+color10 = #53A6A6
+#yellow
+color3 = #914E89
+color11 = #BF85CC
+#blue
+color4 = #395573
+color12 = #4779B3
+#magenta
+color5 = #5E468C
+color13 = #7F62B3
+#cyan
+color6 = #2B7694
+color14 = #47959E
+#white
+color7 = #899CA1
+color15 = #C0C0C0
