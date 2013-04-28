@@ -23,7 +23,7 @@ bindsym Control+mod1+l exec i3lock
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 
-font pango:Cousine 7.2
+font pango:Cousine 7.5
 
 # class                 border  backgr. text    indicator
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4
@@ -34,7 +34,8 @@ font pango:Cousine 7.2
 # class                 border  backgr. text    indicator
 client.focused          #5E468C #5E468C #ffffff #5E468C
 client.focused_inactive #373b41 #373b41 #ffffff #373b41
-client.unfocused        #373b41 #373b41 #888888 #373b41
+client.unfocused        #373
+b41 #373b41 #888888 #373b41
 client.urgent           #2f343a #900000 #ffffff #900000
 
 
@@ -56,13 +57,17 @@ set $gray2 #111111
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+
 bindsym $mod+Return exec termite
-bindsym $mod+b exec firefox-beta-bin
+bindsym $mod+b exec chromium-dev
 bindsym $mod+n exec nautilus --no-desktop
 bindsym $mod+m exec banshee
 
 
 for_window [class="Firefox"] border none
+for_window [class="Aurora"] border none
+for_window [class="Chromium"] border none
+for_window [class="chromium"] border none
 
 # kill focused window
 bindsym $mod+q kill
@@ -90,7 +95,8 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+bindsym $mod+Shift+odiaere
+sis move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -185,10 +191,18 @@ new_float normal
 #hide_edge_borders both
 
 #autostart stuff
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 #exec /usr/libexec/gnome-settings-daemon &
+exec --no-startup-id /usr/bin/start-pulseaudio-x11 &
+exec --no-startup-id xbindkeys &
 exec --no-startup-id nitrogen --restore &
-
+exec --no-startup-id dropboxd &
+exec --no-startup-id unclutter &
+exec --no-startup-id xmodmap /home/kennae/.xmodmaprc &
+exec --no-startup-id synclient TapAndDragGesture=0 &
+exec --no-startup-id mpd &
+exec --no-startup-id udiskie &
+exec --no-startup-id gnome-fallback-media-keys-helper &
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -209,11 +223,11 @@ bar {
 
 
 # Gnome stuff
-exec --no-startup-id gnome-settings-daemon &      # handles themes, starts gnome-screensaver. You may have to use gconf to disable it setting the background.
-exec --no-startup-id nm-applet &                  # assuming you're using Network Manager
-exec --no-startup-id gnome-power-manager &        # for laptops and stuff
-exec --no-startup-id gnome-volume-manager &       # for mounting CDs, USB sticks, and such
-exec --no-startup-id eval `gnome-keyring-daemon`  # SSH/GPG agent
+#exec --no-startup-id gnome-settings-daemon &      # handles themes, starts gnome-screensaver. You may have to use gconf to disable it setting the background.
+#exec --no-startup-id nm-applet &                  # assuming you're using Network Manager
+#exec --no-startup-id gnome-power-manager &        # for laptops and stuff
+#exec --no-startup-id gnome-volume-manager &       # for mounting CDs, USB sticks, and such
+#exec --no-startup-id eval `gnome-keyring-daemon`  # SSH/GPG agent
 
 
 focus_follows_mouse 0

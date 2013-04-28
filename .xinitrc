@@ -1,13 +1,13 @@
 #!/bin/bash
-export BROWSER=firefox-beta-bin
+export BROWSER=chromium
 #export DE=gnome
 export EDITOR=nano
 
-unclutter &
-xmodmap /home/kennae/.xmodmaprc &
-synclient TapAndDragGesture=0 &
-synclient MaxTapTime=0 &
-udiskie &
+#unclutter &
+#xmodmap /home/kennae/.xmodmaprc &
+#synclient TapAndDragGesture=0 &
+#synclient MaxTapTime=0 &
+#udiskie &
  
 #Dbus fix
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then

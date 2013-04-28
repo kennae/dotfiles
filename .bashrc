@@ -9,9 +9,46 @@ alias ls='ls --color=auto'
 
 #PS1='[\u@\h \W]\$ '
 
-alias pacman='sudo pacman-color'
+alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+alias pacman='sudo pacman'
+
+alias kirppu='ssh kirppu.org -l kennae'
+
+alias valmiustila='sudo echo -n mem >/sys/power/state'
+
+export HISTCONTROL=ignoredups
+
+alias dir='ls --color=auto --format=vertical'
 
 alias shutdown='sudo shutdown -hP -t sec now'
+
+# clock - A bash clock that can run in your terminal window. 
+clock () 
+{ 
+while true;do clear;echo "===========";date +"%r";echo "===========";sleep 1;done 
+}
+
+# calc - simple calculator
+# usage: calc <equation>
+calc() { echo "$*" | bc; }
+
+# Define a word - USAGE: define dog
+define ()
+{
+lynx -dump "http://www.google.com/search?hl=en&q=define%3A+${1}&btnG=Google+Search" | grep -m 3 -w "*"  | sed 's/;/ -/g' | cut -d- -f1 > /tmp/templookup.txt
+			if [[ -s  /tmp/templookup.txt ]] ;then	
+				until ! read response
+					do
+					echo "${response}"
+					done < /tmp/templookup.txt
+				else
+					echo "Sorry $USER, I can't find the term \"${1} \""				
+			fi	
+\rm -f /tmp/templookup.txt
+}
+
+
 
 complete -cf sudo
 complete -cf man
